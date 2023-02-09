@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% block title %}Appliances{% endblock title %}
+{% block style %}
+body {
+  box-sizing: border-box;
+  background-color: rgb(230, 228, 228);
+  
+} 
+
+.Container1 {
+  display: grid;
+  grid: auto / auto auto auto;
+  grid-gap: 50px;
+  transition: all;
+  transform: 0.5s;
+  padding: 0 40px 0 40px;
+}
+
+.Container1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.Container1 :hover{
+  transform: scale(1.01);
+  transition: ease-in-out;
+  transition: 0.4s;
+}
+
+.col {
+  background-color: white;
+  padding: 10px 30px 10px 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.185);
+}
+.col :hover{
+  transform: scale(1.01);
+}
+.col img {
+  
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+{% endblock style %}
+{% block body %}
+
+
+<div class="Container1">
+  <a href={% url 'Product' "a1" %}>
+    <div class="col">
+      <img
+        src="https://m.media-amazon.com/images/I/61Ps-5ghwHL._AC._SR360,460.jpg"
+        alt="" />
+      <div class="card-body">
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural
+          lead-in to additional content. This content is a little bit
+          longer.
+        </p>
+      </div>
+    </div>
+  </a>
+
+  <a href={% url 'Product' "a2" %}>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img
+          src="https://m.media-amazon.com/images/I/41wbi-Kl5uL._AC._SR360,460.jpg"
+          alt="" />
+
+        <div class="card-body">
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href={% url 'Product' "a3" %}>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img
+          src="https://m.media-amazon.com/images/I/41WI75+l6TL._AC_UL480_QL65_.jpg"
+          alt="" />
+
+        <div class="card-body">
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href={% url 'Product' "a4" %}>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img
+          src="https://m.media-amazon.com/images/I/511wIb+y8BL._AC._SR360,460.jpg"
+          alt="" />
+
+        <div class="card-body">
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href={% url 'Product' "a5" %}>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img
+          src="https://m.media-amazon.com/images/I/61mfMId4dkL._AC._SR360,460.jpg"
+          alt="" />
+
+        <div class="card-body">
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href={% url 'Product' "a6" %}>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img
+          src="https://m.media-amazon.com/images/I/61ipaZ-XjZL._AC._SR360,460.jpg"
+          alt="" />
+
+        <div class="card-body">
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a href={% url 'Product' "a7" %}>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img
+          src="https://m.media-amazon.com/images/I/41KjUgGMnGL._AC._SR360,460.jpg"
+          alt="" />
+
+        <div class="card-body">
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href={% url 'Product' "a8" %}>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img
+          src="https://m.media-amazon.com/images/I/71zlLSHbJ-L._AC_UL480_QL65_.jpg"
+          alt="" />
+
+        <div class="card-body">
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href={% url 'Product' "a9" %}>
+    <div class="col">
+      <div class="card shadow-sm">
+        <img
+          src="https://m.media-amazon.com/images/I/71zlLSHbJ-L._AC_UL480_QL65_.jpg"
+          alt="" />
+
+        <div class="card-body">
+          <p class="card-text">
+            This is a wider card with supporting text below as a natural
+            lead-in to additional content. This content is a little bit
+            longer.
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+{% endblock body %}
+

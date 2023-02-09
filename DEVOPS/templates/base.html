@@ -1,0 +1,148 @@
+<!doctype html>
+{% load static %}
+<html lang="en" >
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href={% static 'navbar.css' %}>
+    {% comment %} <link rel="stylesheet" href="static/prop.  css"> {% endcomment %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
+    <title> {% block title %}{% endblock title %} SID Wants MILK</title>
+    <style type="text/css">
+      body {
+        box-sizing: border-box;
+        background-color: rgb(230, 228, 228);
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .icon-Cart{
+        margin: auto;
+      }
+      #navbarSupportedContent{
+        position: relative;
+        left: 20px
+        margin-left: 20px;
+      }
+      .Container {
+        width: 100%;
+        padding: 0;
+        height: 125px;
+        background-color: rgb(51, 51, 51);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+      }
+
+      .nav-Items-Links {
+        display: flex;
+        flex-direction: row;
+        
+      }
+
+      .nav-Items-Links li,
+      a {
+        list-style: none;
+        padding: 0 0 0 0;
+        color: white;
+        text-decoration: none;
+        font-size: large;
+      }
+
+      .nav-elements-container {
+        display: flex;
+        flex-direction: column;
+      }
+    
+
+      {% block style %}{% endblock style %}
+    </style>
+  </head>
+  <body>
+    <nav class="Container">
+      <div class="nav-elements-container">
+        <button
+          class="icon-Cart"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <br />
+          <img
+            src="https://www.freeiconspng.com/thumbs/cart-icon/basket-cart-icon-27.png"
+            width="40"
+            alt="" />
+        </button>
+        <div id="navbarSupportedContent">
+          <ul class="nav-Items-Links">
+            <li>
+              <a aria-current="page" href="/home">Home</a>
+            </li>
+            <li>
+              <a href="/pet">Pet</a>
+            </li>
+            <li>
+              <a href="/men">Men</a>
+            </li>
+            <li>
+              <a href="/women">Women</a>
+            </li>
+            <li>
+              <a href="/kids">Kids</a>
+            </li>
+            <li>
+              <a href="/appliances">Appliances</a>
+            </li>
+            <li>
+              <a href="/electronics">Electronics</a>
+            </li>
+            <li>
+              <a href="/con">Contact Us</a>
+            </li>
+            <li>
+              <a href="/padmin">
+                Product Admin
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+      
+        
+      
+      
+      {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0 " role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+      {% endif %}
+      
+      
+      {% block body %}{% endblock body %}
+      
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

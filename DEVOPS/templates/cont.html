@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block style %} 
+.ContactUs-Container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 500px;
+
+  
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 0;
+  border: rgb(150, 150, 150) 1px solid;
+  border-radius: 5px;
+  margin: 0 0 24px 0;
+}
+
+.contact-Heading {
+  font-size: 40px;
+}
+
+.ContactUs-Container form {
+  width: 90%;
+}
+
+.form-label {
+  display: flex;
+  font-size: medium;
+  font-weight: 800;
+  color: rgb(52, 52, 52);
+}
+
+.form-text {
+  font-size: small;
+  padding-bottom: 12px;
+  color: gray;
+}
+
+.contactUs-btn-submit {
+  padding: 9px 16px;
+  margin-left: 400px;
+  background-color: rgb(69, 69, 234);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  width: 15%;
+}
+{% endblock style %}
+{% block body %} 
+<section class="ContactUs-Container">
+  <div><h1 class="contact-Heading">CONTACT US</h1></div>
+  
+  <form method="post" action="">
+    {% csrf_token %}
+    <div class="mb-3" action="/con">
+      <label for="exampleInputEmail1" class="form-label"
+        >Email address</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name="email" />
+      <div id="emailHelp" class="form-text">
+        We'll never share your email with anyone else.
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="name" />
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Concern Type</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="ct" />
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label"
+        >Contact Number</label
+      >
+      <input
+        type="describedby"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="num" />
+    </div>
+
+    <button type="submit" class="contactUs-btn-submit">Submit</button>
+  </form>
+</section>
+{% endblock body %}

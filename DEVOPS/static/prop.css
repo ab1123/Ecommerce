@@ -1,0 +1,15 @@
+body{
+    background-color: blue;
+}
+.navbar{
+    background-color: pink;
+    
+}
+.nav-item{
+    color: beige;
+    
+}
+.card-body{
+    position: absolute;
+    left: 6vw;
+}
